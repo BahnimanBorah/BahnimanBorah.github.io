@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Blog: Bahniman Borah</title>
+    <title>Borah Inc.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -14,17 +14,17 @@
              
   <!--                 page top hanger               -->
     <div class="container">
-
         <div class="alert alert-danger alert-dismissible fade show">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong>Note !</strong> This site is still under construction.
         </div>
+
       <div class="row">
         <div class="col-lg-12">
         <!--                navigation                -->
         <nav class="navbar navbar-expand-md bg-dark navbar-dark">
             <!-- Brand -->
-            <a class="navbar-brand" href="index.html">Top Blogs</a>
+            <input type="button" class="navbar-brand btn btn-dark" onclick="index()" value="Top Blog">
           
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -35,20 +35,20 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="about">|About|</a>
+                  <input type="button" class="btn btn-dark" onclick="about()" value="|About|">
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="recents">|Recents|</a>
+                  <input type="button" class="btn btn-dark" onclick="recents()" value="|Recents|">
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#contactSection">|Contact|</a>
+                    <input type="button" class="btn btn-dark" onclick="contact()" value="|Contact|">
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">|Projects|</a>
+                  <input type="button" class="btn btn-dark" onclick="projects()" value="|Projects|">
                   </li>
               </ul>
             </div>
-          </nav> 
+        </nav> 
 
         </div>
 
@@ -58,36 +58,10 @@
                 <div class="col-lg-12">
                         <div class="jumbotron bg-dark">
                           <h1 class="text-success display-3" id="heading">Blog</h1>
-                          <p class="text-warning">Welcom to my <kbd>GitHub</kbd> pages blog account.</p>
+                          <p class="text-warning">Welcom to my <kbd>GitHub</kbd> pages blog account. New blogs every friday.</p>
                         </div>
-                        <div class="jumbotron bg-dark">
-                          <h1 class="text-info">Today's blog</h1>
-                          <div class="col-lg-6">
-                            <h3 class="text-light lead">Looking for resources:</h3>
-                            <p class="text-light">I have been looking for some resources to study and understand circuits with microcontrollers such as ardruino
-                              or microprocessors like early intel chips 8086 along with the interrupt controllers. I'm currently a final year
-                              student and I'm currently assigned the responsibility by the university to create a project that should be worthy of being categorized 
-                              as an innovation. 
-                            </p>
-                            <p class="text-light">Features that I want to be a part of my project:</p>
-                            <p>
-                                <ul class="text-light">
-                                    <li>Interactable</li>
-                                    <li>Responsive</li>
-                                    <li>Fast</li>
-                                    <li>User friendly</li>
-                                    <li><strong>Amazing!</strong></li>
-                                  </ul>
-                            </p> 
-                            <p class="text-light">
-                              I do have some ideas with me but the only thing I need to make sure it that I do perform my best to complete this project
-                              in time. The idea I've been giving a thought requires experience and operating simple circuits to control and manage voltages
-                              across different motors and controllers. Yes, I know you might be having some guesses popping onto your head right now and 
-                              yes maybe something like that yeah. Now I do have a few days to research on this topic to finalize the idea for my project
-                              but I'll need to make sure that I keep up with it. Yes, you know it too. It's not gonna happen if I don't. A bird is on the
-                              way.
-                            </p>
-                          </div>
+                        <div class="jumbotron bg-dark" id="blogcontent">
+                          <!--Main blog web page content goes here-->
                         </div>
 
                         <div class="jumbotron" id="contactSection">
@@ -123,5 +97,64 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script>
+
+  function index() {
+    home();
+    document.getElementById('heading').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
+  }
+  home();
+  function home() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("blogcontent").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "pages/todaysblog.html", true);
+    xhttp.send();
+  }
+  
+  function about() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("blogcontent").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "pages/about.html", true);
+    xhttp.send();
+    document.getElementById('blogcontent').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
+  }
+  function recents() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("blogcontent").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "pages/recents.html", true);
+    xhttp.send();
+    document.getElementById('blogcontent').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
+  }
+  function contact() {
+    document.getElementById('contactSection').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
+  }
+  function projects() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("blogcontent").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "pages/projects.html", true);
+    xhttp.send();
+    document.getElementById('blogcontent').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
+  }
+</script>
 </body>
 </html>
