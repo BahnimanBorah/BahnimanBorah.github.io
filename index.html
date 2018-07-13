@@ -1,160 +1,205 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Borah Inc.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bahniman - Github</title>
+    <link rel="stylesheet" href="bs4/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="bg-secondary">
-    
-             
-  <!--                 page top hanger               -->
+<body> 
+
     <div class="container">
-        <div class="alert alert-danger alert-dismissible fade show">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Note !</strong> This site is still under construction.
-        </div>
-
-      <div class="row">
-        <div class="col-lg-12">
-        <!--                navigation                -->
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <!-- Brand -->
-            <input type="button" class="navbar-brand btn btn-dark" onclick="index()" value="Top Blog">
-          
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <input type="button" class="btn btn-dark" onclick="about()" value="|About|">
-                </li>
-                <li class="nav-item">
-                  <input type="button" class="btn btn-dark" onclick="recents()" value="|Recents|">
-                </li>
-                <li class="nav-item">
-                    <input type="button" class="btn btn-dark" onclick="contact()" value="|Contact|">
-                </li>
-                <li class="nav-item">
-                  <input type="button" class="btn btn-dark" onclick="projects()" value="|Projects|">
-                  </li>
-              </ul>
-            </div>
-        </nav> 
-
-        </div>
-
-      </div>
         <div class="row">
-            
-                <div class="col-lg-12">
-                        <div class="jumbotron bg-dark">
-                          <h1 class="text-success display-3" id="heading">Blog</h1>
-                          <p class="text-warning">Welcom to my <kbd>GitHub</kbd> pages blog account. New blogs every friday.</p>
+            <div class="col-lg-12" style="padding-bottom: calc(20px)">
+                <h1 class="display-2 text-primary">Blog</h1>
+                <p class="text-warning">Welcom to my <kbd>GitHub</kbd> pages blog account.</p>
+                
+                <nav class="navbar navbar-expand-md navbar-dark">
+                        <!-- Brand -->
+                        <a id="homebutton" class="navbar-brand" href="index.html">Home</a>
+                      
+                        <!-- Toggler/collapsibe p -->
+                        <p class="navbar-toggler" type="p" data-toggle="collapse" data-target="#collapsibleNavbar">
+                          <span class="navbar-toggler-icon"></span>
+                        </p>
+                      
+                        <!-- Navbar links -->
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                          <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Projects</a>
+                              <div class="dropdown-menu">
+                                    <button class="dropdown-item navbar-link" onclick="projects()">Live Projects</button>
+                                    <a class="dropdown-item navbar-link" href="https://www.github.com/bahnimanborah" target="_blank">Source Code-Github</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Utilities</a>
+                                    <div class="dropdown-menu">
+                                      <a class="dropdown-item" href="#">Components</a>
+                                    </div>
+                            </li>
+                          </ul>
                         </div>
-                        <div class="jumbotron bg-dark" id="blogcontent">
-                          <!--Main blog web page content goes here-->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/admin.html">Admin Panel <span class="fa fa-user"></span> <span class="fa fa-lock"></span></a>
+                              </li>
+                        </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8 col-xs-12">
+                        <div class="card" style="background:transparent;border:none"  id="content">
+                        
+                        <div id="demo" class="carousel slide" data-ride="carousel">
+
+                                <!-- Indicators -->
+                                <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                                <li data-target="#demo" data-slide-to="3"></li>
+                                <li data-target="#demo" data-slide-to="4"></li>
+                                </ul>
+                                
+                                <!-- The slideshow -->
+                                <div class="carousel-inner text-center">
+                                <div class="carousel-item active">
+                                    <img class="img-responsive rounded slideshow" src="images/q1.jpeg">
+                                    <div class="carousel-caption">
+                                    <p class="text-light lead">Vadodara, Gujarat</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-responsive rounded slideshow" src="images/q2.jpg">
+                                    <div class="carousel-caption">
+                                    <p class="text-light lead">Restrictions</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-responsive rounded slideshow" src="images/q3.jpeg">
+                                    <div class="carousel-caption">
+                                    <p class="text-light lead">ITM Football team at Reliance Youth Sports Foundation Football Tournament</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-responsive rounded slideshow" src="images/q4.jpg">
+                                    <div class="carousel-caption">
+                                    <p class="text-light lead">Woods over city lights</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="img-responsive rounded slideshow" src="images/q5.jpeg">
+                                    <div class="carousel-caption">
+                                    <p class="text-light lead">Near Sardar Sarovar Dam, Rajpipla</p>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Left and right controls -->
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                </a>
+                        </div>
+                        </div>
+                        <div id="blog">
+
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="col-lg-3 col-xs-12">
+                        <h4 class="text-light lead">Favourite Quotes</h4>
+                        <div class="card mymarquees" style="height:300px;overflow: hidden;border:none">
+
+                                
+                                
+                                    <div id="marqueecontainer" onMouseover="copyspeed=pausespeed" onMouseout="copyspeed=marqueespeed">
+                                        <div id="vmarquee" style="position: absolute;">
+                                                    
+                                        <script src="js/quotes.js"></script>
+
+                                        <!--YOUR SCROLL CONTENT HERE-->
+                                        </div>
+                                    </div>
+                                
+                            
+                        </div>
+                        <h4 class="text-light lead">Feed</h4>
+                        <div class="card mymarquees" style="height:300px;overflow: hidden;border:none">
+
+                                
+                                
+                                    <!--SCROLL CONTENT -->
+                                    <div id="marqueecontainer1" onMouseover="copyspeed1=pausespeed1" onMouseout="copyspeed1=marqueespeed1">
+                                        <div id="vmarquee1" style="position: absolute;">
+                                                    
+                                        
+                                        <script src="js/feeds.js"></script>
+                                        
+                                        
+                                        </div>
+                                    </div>
+                                
+                            
                         </div>
 
-                        <div class="jumbotron" id="contactSection">
-                                  <div class="row">
-                                      <div class="col-lg-6">
+                    </div>
+                    <div class="col-lg-1 text-center">
+                            <a class="form-control btn-primary" href="https://www.facebook.com/Bahniman7"><i class="fa fa-facebook"></i></a>
+                            <a class="form-control btn-primary" style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%)" href="https://www.instagram.com/_bahnimanborah"><i class="fa fa-instagram"></i></a>
+                            <a class="form-control btn-danger" href="https://www.youtube.com/channel/UCDZVT5xDA-PPSpYnY6pHUrQ"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 jumbotron bg-light">
+                            <div class="row">
+                                    <div class="col-lg-6">
                     
                                               <h1>CONTACT</h1>
                                               <i class="fa fa-map-marker" style="width:30px"></i>Gujarat, India<br>
                                               <i class="fa fa-phone" style="width:30px"></i>+91-xxxxx-xxxxx<br>
+                                              <i class="fa fa-fax" style="width:30px"></i>xxxxx-xxxxx<br>
                                               <i class="fa fa-envelope" style="width:30px"></i>Email:bahnimanborah@yahoo.in<br>
                                           
                                       </div>
                                       <div class="col-lg-6">
-                                          <p class="lead">Inquiry</p>
+                                          <p class="lead">Leave a message...</p>
                                               <div class="form-inline">
-                                                  <input class="form-control input-sm" name="name" type="text" placeholder="Enter name">
-                                                  <input class="form-control input-sm" name="email_id" type="text" placeholder="Enter email">    
+                                                 
                                               </div>
                                               <div class="form-horizontal">
-                                                  <input class="form-control input-sm" name="message" type="text" placeholder="Enter message">
-                                                  <input class="btn btn-primary" type="button" value="Send">
+                                                    <input class="form-control input-sm" name="name" type="text" placeholder="Enter name">
+                                                    <input class="form-control input-sm" name="name" type="text" placeholder="Enter email/phone number">
+                                                    <input class="form-control input-sm" name="message" type="text" placeholder="Message">
+                                                    <input class="btn btn-primary form-control" type="button" value="Submit">
                                               </div>
                                       </div>
 
-                                  </div>
-                        </div>
-                </div>
-            
+                            </div>
+            </div>
         </div>
-
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script>
-
-  function index() {
-    home();
-    document.getElementById('heading').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
-  }
-  home();
-  function home() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("blogcontent").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "pages/todaysblog.html", true);
-    xhttp.send();
-  }
-  
-  function about() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("blogcontent").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "pages/about.html", true);
-    xhttp.send();
-    document.getElementById('blogcontent').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
-  }
-  function recents() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("blogcontent").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "pages/recents.html", true);
-    xhttp.send();
-    document.getElementById('blogcontent').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
-  }
-  function contact() {
-    document.getElementById('contactSection').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
-  }
-  function projects() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("blogcontent").innerHTML =
-        this.responseText;
-      }
-    };
-    xhttp.open("GET", "pages/projects.html", true);
-    xhttp.send();
-    document.getElementById('blogcontent').scrollIntoView({block: "center", behavior: "smooth", inline: "nearest"});
-  }
-</script>
+<script src="bs4/jquery-3.3.1.slim.min.js"></script>
+<script src="bs4/popper.min.js"></script>
+<script src="bs4/bootstrap.min.js"></script>
+<script src="js/routing.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>
