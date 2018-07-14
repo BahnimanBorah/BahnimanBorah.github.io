@@ -10,6 +10,10 @@
         width: inherit;
         height: calc(250px);
     }
+    .mymarquees,.mymarqueeshead{
+        width: 80%;
+        margin: auto;
+    }
     
 }
 @media(min-width: 769px){
@@ -26,14 +30,28 @@
         height: calc(450px);
     }
    
+   
 }
 .mymarquees{
     background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
     padding:2%;
 }
-.nav-item:hover{
-    background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
-}
 .jumbotron{
     background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+}
+#userpanel{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    overflow: auto;
+
+}
+#userpanel li {
+    width: calc(100%/3);
+    text-align: center;
+    font-size: 18px;
+}
+.dropdown-menu{
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }

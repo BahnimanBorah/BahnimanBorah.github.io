@@ -33,22 +33,23 @@
                               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Projects</a>
                               <div class="dropdown-menu">
                                     <button class="dropdown-item navbar-link" onclick="projects()">Live Projects</button>
-                                    <a class="dropdown-item navbar-link" href="https://www.github.com/bahnimanborah" target="_blank">Source Code-Github</a>
+                                    <a class="dropdown-item navbar-link" href="https://www.github.com/bahnimanborah" target="_blank">Source Codes-Github</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Utilities</a>
                                     <div class="dropdown-menu">
-                                      <a class="dropdown-item" href="#">Components</a>
+                                      <a class="dropdown-item" href="https://www.github.com/bahnimanborah/Utilities" target="_blank">Components</a>
                                     </div>
                             </li>
                           </ul>
+                          <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/admin.html">Admin Panel <span class="fa fa-user"></span> <span class="fa fa-lock"></span></a>
+                                  </li>
+                            </ul>
                         </div>
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="pages/admin.html">Admin Panel <span class="fa fa-user"></span> <span class="fa fa-lock"></span></a>
-                              </li>
-                        </ul>
+                        
                 </nav>
             </div>
         </div>
@@ -120,7 +121,7 @@
                         
                     </div>
                     <div class="col-lg-3 col-xs-12">
-                        <h4 class="text-light lead">Favourite Quotes</h4>
+                        <h4 class="text-light lead mymarqueeshead">Favourite Quotes</h4>
                         <div class="card mymarquees" style="height:300px;overflow: hidden;border:none">
 
                                 
@@ -137,29 +138,47 @@
                             
                         </div>
                         <h4 class="text-light lead">Feed</h4>
-                        <div class="card mymarquees" style="height:300px;overflow: hidden;border:none">
+                        <div class="card" style="height:300px">
 
                                 
                                 
-                                    <!--SCROLL CONTENT -->
-                                    <div id="marqueecontainer1" onMouseover="copyspeed1=pausespeed1" onMouseout="copyspeed1=marqueespeed1">
-                                        <div id="vmarquee1" style="position: absolute;">
-                                                    
-                                        
-                                        <script src="js/feeds.js"></script>
-                                        
-                                        
+                            <div class="bg-info" id="userpanel">
+
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" id="insta-tab" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true"><i class="text-info fa fa-instagram"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="facebook-tab" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><i class="text-primary fa fa-facebook"></i></a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="youtube-tab" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><i class="text-danger fa fa-youtube"></i></a>
+                                        </li>
+                                      </ul>
+                                      <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="insta-tab">
+                                                <h5>Latest Posts</h5>
+                                                <script src="js/instafeed.js"></script>
                                         </div>
-                                    </div>
+                                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="facebook-tab">
+                                                <h5>Updates</h5>
+                                                <p>No new messages available.</p>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="youtube-tab">
+                                                <h5>Uploads</h5>
+                                                <script src="js/youtubefeed.js"></script>
+                                        </div>
+                                      </div>
+                            </div>
                                 
                             
                         </div>
 
                     </div>
                     <div class="col-lg-1 text-center">
-                            <a class="form-control btn-primary" href="https://www.facebook.com/Bahniman7"><i class="fa fa-facebook"></i></a>
-                            <a class="form-control btn-primary" style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%)" href="https://www.instagram.com/_bahnimanborah"><i class="fa fa-instagram"></i></a>
-                            <a class="form-control btn-danger" href="https://www.youtube.com/channel/UCDZVT5xDA-PPSpYnY6pHUrQ"><i class="fa fa-youtube"></i></a>
+                            <a class="form-control btn-primary" href="https://www.facebook.com/Bahniman7" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a class="form-control btn-primary" style="background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%)" href="https://www.instagram.com/_bahnimanborah" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a class="form-control btn-danger" href="https://www.youtube.com/channel/UCDZVT5xDA-PPSpYnY6pHUrQ" target="_blank"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -184,10 +203,13 @@
                                                  
                                               </div>
                                               <div class="form-horizontal">
-                                                    <input class="form-control input-sm" name="name" type="text" placeholder="Enter name">
-                                                    <input class="form-control input-sm" name="name" type="text" placeholder="Enter email/phone number">
+                                                <form action="php/message.php" method="POST">
+                                                    <input class="form-control input-sm" id="name" name="name" type="text" placeholder="Enter name" required>
+                                                    <input class="form-control input-sm" id="contact" name="contact" type="text" placeholder="Enter email/phone number">
                                                     <input class="form-control input-sm" name="message" type="text" placeholder="Message">
-                                                    <input class="btn btn-primary form-control" type="button" value="Submit">
+                                                    <input class="btn btn-primary form-control" type="submit" value="Submit" id="submit">
+                                                    <div id="alerts"></div>
+                                                </form>
                                               </div>
                                       </div>
 

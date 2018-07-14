@@ -81,18 +81,5 @@ else if (document.getElementById){
 
 /**JQUERY EVENTS */
 
-$(document).ready(function(){
-
-    $(".dropdown-toggle").mouseenter(function(){
-        $(this).dropdown("toggle");
-    });
-    $(".dropdown-menu").mouseleave(function(){
-        $(this).dropdown("toggle");
-    });
-    
-    
-
-});
-
 
 /**JQUERY EVENTS END HERE*/
