@@ -55,3 +55,16 @@
 .dropdown-menu{
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
+#profilecard{
+    opacity: 0.5;
+    transition: opacity 3s;
+    transition: font-size 0.5s;
+    transition: height 0.5s;
+    transition: margin-left 1s;
+    transition: 3s;
+}
+#profilecard:hover{
+    opacity: 1;
+    font-size: 17px;
+    margin-left: 50px;
+}

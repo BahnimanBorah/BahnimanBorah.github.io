@@ -26,7 +26,7 @@ function initializemarquee(){
         cross_marquee.style.overflow="scroll";
         return;
     }
-    setTimeout('lefttime=setInterval("scrollmarquee()",30)', 2000);
+    setTimeout('lefttime=setInterval("scrollmarquee()",30)', 4000);
 }
 
 function scrollmarquee(){
@@ -51,7 +51,7 @@ function initializemarquee1(){
         cross_marquee1.style.overflow="scroll";
         return;
     }
-    setTimeout('lefttime=setInterval("scrollmarquee1()",30)', 2000);
+    setTimeout('lefttime=setInterval("scrollmarquee1()",30)', 4000);
 }
 
 function scrollmarquee1(){
