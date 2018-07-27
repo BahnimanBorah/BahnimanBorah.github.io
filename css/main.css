@@ -33,7 +33,7 @@
    
 }
 .mymarquees{
-    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
     padding:2%;
 }
 .jumbotron{
