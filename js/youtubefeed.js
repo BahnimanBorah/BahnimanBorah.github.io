@@ -7,5 +7,5 @@ var links = [
     "https://www.youtube.com/watch?v=pluWaVmLoVo"
 ];
 for(var i=0;i<quotes.length;i++){
-    document.write("<p><i class='text-danger fa fa-youtube'></i> <a class='text-dark small' href='"+ links[i] +"' class='lead small' target='_blank'>"+quotes[i]+"</a></p>")
+    document.write("<p><i class='text-danger fa fa-youtube'></i> <a class='text-light small' href='"+ links[i] +"' class='lead small' target='_blank'>"+quotes[i]+"</a></p>")
 }

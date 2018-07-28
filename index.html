@@ -14,7 +14,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12" style="padding-bottom: calc(20px)">
-                <h1 class="display-2 text-primary">Blog</h1>
+                <h1 class="display-2 text-primary"><a href="index.html" style="text-decoration: none">Blog</a></h1>
                 <p class="text-warning">Welcom to my <kbd>GitHub</kbd> pages blog account.</p>
                 
                 <nav class="navbar navbar-expand-md navbar-dark">
@@ -54,9 +54,10 @@
             </div>
         </div>
                 
-                    <div class="row">
+        <div id="content">
+                <div class="row">
                         <div class="col-lg-7 col-xs-12">
-                            <div class="card" style="background:transparent;border:none;width:90%;margin: auto"  id="content">
+                            <div class="card" style="background:transparent;border:none;width:90%;margin: auto">
                             
                             <div id="demo" class="carousel slide" data-ride="carousel">
     
@@ -136,7 +137,7 @@
                             </div>
                             <div  class="float-right top-right-plates" style="width: 50%">
                                 <h4 class="text-info lead">Feed</h4>
-                                <div class="card" style="height:inherit;background: transparent;border: none">
+                                <div class="card" style="height:inherit;background: transparent;border: none;transition: all 5s ease-out">
                                     <div id="userpanel">
         
                                         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -202,7 +203,16 @@
                                           
                                       </div>
                                       <div class="col-lg-6 text-light">
-                                          <p class="lead">Leave a message...</p>
+                                          <button class="btn" style="background: transparent;height: 40px;" onclick="message()"><p class="lead btn-text">Leave a message...</p></button>
+                                          <div id="messageform" class="form-horizontal float-right" style="opacity:0;min-width: 200px;margin-right: 1%">
+                                            <div class="form-ground text-light" style="background: inherit;padding: 2%">
+                                                <button class="btn" style="background: transparent;margin-left: 80%" onclick="messageclose()">x</button>
+                                                <input type="text" name="name" class="form-control" placeholder="Name">
+                                                <textarea name="message" class="form-control" placeholder="Message.." style="height: 150px;resize: none"></textarea>
+                                                <input type="button" onclick="submit()" class="form-control btn-success" value="send..">
+            
+                                            </div>
+                                          </div>
                                           <h1>CONTACT</h1>
                                           <p class="profiletext lead">
                                             <i class="fa fa-map-marker" style="width:30px"></i>Gujarat, India<br>
@@ -215,6 +225,11 @@
                             </div>
             </div>
         </div></div>
+        </div>
+
+
+
+
     </div>
 
 <script src="bs4/jquery-3.3.1.slim.min.js"></script>

@@ -1,3 +1,12 @@
+function messageclose(){
+    document.getElementById("messageform").style.opacity=0;
+}
+function message(){
+    document.getElementById("messageform").style.opacity=1;
+}
+
+
+
 /** NEWS BULLETIN SLIDE SHOW */
 
 var marqueespeed=1;
@@ -77,6 +86,8 @@ else if (document.getElementById){
 }
 
 /** NEWS BULLETIN SLIDE SHOW ENDS HERE*/
+
+
 
 
 /**JQUERY EVENTS */
