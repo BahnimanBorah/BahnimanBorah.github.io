@@ -7,7 +7,7 @@ var quotes = [
     '“The biggest risk is not taking any risk… In a world that’s changing really quickly, the only strategy that is guaranteed to fail is not taking risks." <h6 class="text-warning">— Mark Zuckerberg</h6>',
     '“The key to immortality is first living a life worth remembering." <h6 class="text-warning">— Bruce Lee</h6>',
     '“Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that." <h6 class="text-warning">— Martin Luther King, Jr</h6>',
-    '“Don\'t think, feel....it is like a finger pointing a way to the moon. Don\'t concentrate on the finger or you will miss all that heavenly glory!." <h6 class="text-warning">— Bruce Lee</h6>'
+    '“Don\'t think, feel....it is like a finger pointing a way to the moon. Don\'t concentrate on the finger or you will miss all that heavenly glory!" <h6 class="text-warning">— Bruce Lee</h6>'
 ];
 
 for(var i=quotes.length-1;i>=0;i--){
