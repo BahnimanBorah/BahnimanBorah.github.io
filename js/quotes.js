@@ -11,5 +11,5 @@ var quotes = [
 ];
 
 for(var i=quotes.length-1;i>=0;i--){
-    document.write("<p class='text-dark lead' style='font-size:15px'>"+quotes[i]+"</p>")
+    document.write("<p class='text-light lead' style='font-size:15px'>"+quotes[i]+"</p>")
 }

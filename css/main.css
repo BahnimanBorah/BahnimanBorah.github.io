@@ -8,12 +8,15 @@
     }
     .slideshow{
         width: inherit;
-        height: calc(250px);
+        height: calc(200px);
     }
-    .mymarquees,.mymarqueeshead{
-        width: 80%;
-        margin: auto;
+    .mymarquees,#userpanel{
+        height: 100px;
     }
+    .top-right-plates{
+        height: 250px;
+    }
+   
     
 }
 @media(min-width: 769px){
@@ -26,24 +29,30 @@
         transition: height 2s;
     }
     .slideshow{
-        width: inherit;
-        height: calc(450px);
+        width: 90%;
+        height: calc(400px);
+    }
+    .top-right-plates{
+        height: 300px;
     }
    
    
 }
 .mymarquees{
-    background-image: linear-gradient(to top, #a7a6cb 0%, #8989ba 52%, #8989ba 100%);
+    background: transparent;
     padding:2%;
 }
 .jumbotron{
-    background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);
+    background: transparent;
+}
+.jumbotron:hover{
+    background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 #userpanel{
     width: 100%;
     height: 100%;
     padding: 2%;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    
     overflow: auto;
 
 }
@@ -56,18 +65,35 @@
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 #profilecard{
-    opacity: 0.4;
+    opacity: 0.5;
     background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
     background-blend-mode: multiply;
     transition: opacity 1.5s;
     transition: font-size 0.5s;
     transition: height 0.5s;
     transition: margin-left 1s;
-    transition: 3s;
+    transition: 2s;
 }
 #profilecard:hover{
-    opacity: 0.8;
+    opacity: 1;
     font-size: 17px;
     margin-left: 50px;
     
+}
+#blogarea{
+    background-image: url(../images/cr7.png);
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.profiletext{
+    font-size: 15px;
+    transition: font-size 1s;
+    transition: 1s;
+}
+.profiletext:hover{
+    font-size: 17px;
+    font-weight:300;
 }
