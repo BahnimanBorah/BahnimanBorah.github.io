@@ -29,7 +29,7 @@
         transition: height 2s;
     }
     .slideshow{
-        width: 90%;
+        width: 85%;
         height: calc(400px);
     }
     .top-right-plates{
@@ -81,7 +81,7 @@
     
 }
 #blogarea{
-    background-image: url(../images/cr7.png);
+    background-image: url(../images/cr_7.png);
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
