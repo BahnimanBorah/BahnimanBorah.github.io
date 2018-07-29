@@ -7,7 +7,7 @@
         background-size: calc(100%);
     }
     .slideshow{
-        width: inherit;
+        width: 100%;
         height: calc(200px);
     }
     .mymarquees,#userpanel{
@@ -29,8 +29,8 @@
         transition: height 2s;
     }
     .slideshow{
-        width: 85%;
-        height: calc(400px);
+        width: 95%;
+        height: calc(450px);
     }
     .top-right-plates{
         height: 300px;
@@ -61,7 +61,8 @@
     font-size: 18px;
 }
 .dropdown-menu{
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
 }
 #profilecard{
     opacity: 0.5;
